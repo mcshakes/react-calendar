@@ -3,8 +3,7 @@ var Appointments = React.createClass({
     return (
         <div>
           <AppointmentForm />
-          <AppointmentsList />
-        }
+          <AppointmentsList appointments={this.props.appointments} />
         </div>
     )
   }
