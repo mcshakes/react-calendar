@@ -1,1 +1,17 @@
 <%= react_component "Appointments" %>
+
+<h1>React Calendar</h1>
+
+<h2>Appointments</h2>
+
+<h3>Make a new Calendar</h3>
+
+<%= form_for @appointment, remote: true do |f| %>
+  <%= f.text_field :title %>
+  <%= f.text_field :appt_time %>
+  <%= f.submit  "Make Appointment"%>
+<% end %>
+
+<div id="appointments">
+  <%= render "appointments" %>
+</div>
