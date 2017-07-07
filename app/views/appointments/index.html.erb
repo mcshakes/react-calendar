@@ -6,7 +6,11 @@
 
 <h3>Make a new Calendar</h3>
 
-<%= form_for @appointment, remote: true do |f| %>
+<%= react_component("Appointments", appointments: @appointments) %>
+
+<!-- NOTE removed and replaced with above -->
+
+<!-- <%= form_for @appointment, remote: true do |f| %>
   <%= f.text_field :title %>
   <%= f.text_field :appt_time %>
   <%= f.submit  "Make Appointment"%>
@@ -14,4 +18,4 @@
 
 <div id="appointments">
   <%= render "appointments" %>
-</div>
+</div> -->
