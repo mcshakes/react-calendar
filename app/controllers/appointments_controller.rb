@@ -13,7 +13,6 @@ class AppointmentsController < ApplicationController
       render json: @appointment.errors, status: :unprocessable_entity
     end
 
-    @appointments = Appointment.order("appt_time ASC")
   end
 
   private

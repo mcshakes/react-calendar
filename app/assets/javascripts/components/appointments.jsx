@@ -16,9 +16,13 @@ var Appointments = React.createClass({
     $.post("/appointments",
             {appointment: appointment})
             .done(function(data) {
-              
+              this.addNewAppointment(data);
             });
   },
+
+  addNewAppointment: function(appointment) {
+    
+  }
 
   render: function() {
     return (
