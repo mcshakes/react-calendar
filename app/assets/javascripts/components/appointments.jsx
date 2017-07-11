@@ -14,9 +14,12 @@ var Appointments = React.createClass({
   handleFormSubmit: function() {
     var appointment = {title: this.state.title, appt_time: this.state.appt_time}
     $.post("/appointments",
-            {appointment: appointment});
+            {appointment: appointment})
+            .done(function(data) {
+              
+            });
   },
-  
+
   render: function() {
     return (
         <div>
