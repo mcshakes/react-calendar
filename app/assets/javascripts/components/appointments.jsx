@@ -17,12 +17,14 @@ var Appointments = React.createClass({
             {appointment: appointment})
             .done(function(data) {
               this.addNewAppointment(data);
-            });
+            }.bind(this));
+            // NOTE: Bind to outer scope
   },
 
   addNewAppointment: function(appointment) {
-    
-  }
+    var appointments = React.addons.update(this.state.appointments, { $push: [appointment]})
+    this.setState({ appointments: appointments  })
+  },
 
   render: function() {
     return (
