@@ -4,6 +4,7 @@ var Appointment = React.createClass({
       <div>
         <h3>{this.props.appointment.title}</h3>
         <p>{this.props.appointment.appt_time}</p>
+        <p>TEST</p>
       </div>
     )
 
